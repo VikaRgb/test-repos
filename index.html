@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <ul onclick="openModal()">
+      <li>
+        <img
+          width="400"
+          src="https://www.digitaltrends.com/wp-content/uploads/2022/08/macbook-air-m2-1.jpg?resize=625%2C417&p=1"
+          class="img"
+        />
+      </li>
+      <li>
+        <img
+          width="400"
+          src="https://www.digitaltrends.com/wp-content/uploads/2022/08/macbook-air-m2-1.jpg?resize=625%2C417&p=1"
+          class="img"
+        />
+      </li>
+      <li>
+        <img
+          width="400"
+          src="https://www.digitaltrends.com/wp-content/uploads/2022/08/macbook-air-m2-1.jpg?resize=625%2C417&p=1"
+          class="img"
+        />
+      </li>
+    </ul>
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img src="" class="modal-img" id="img01" />
+    </div>
+    <script>
+      let modal = document.getElementById('modal');
+      function openModal() {
+        let img = document.querySelector('.img');
+        let modalImg = document.getElementById('img01');
+        modal.style.display = 'block';
+        modalImg.src = img.src;
+      }
+
+      function closeModal() {
+        modal.style.display = 'none';
+      }
+    </script>
+  </body>
+</html>
+
